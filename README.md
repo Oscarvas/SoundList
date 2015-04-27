@@ -3,6 +3,7 @@ Data Mining Project
 
 
 > command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+
 > \curl -sSL https://get.rvm.io | bash -s stable --rails
 
 
@@ -12,12 +13,15 @@ Data Mining Project
 
 
 > source ~/.rvm/scripts/rvm
+
 > rvm install ruby
+
 > gem install rails
 
 
 //------------------ opcional
 > rvm gemset create prueba
+
 > rvm ruby-2.2.0@prueba
 
 
@@ -30,8 +34,9 @@ Data Mining Project
 // agregar esto al final del document tal cual aparece aqui
 
 
-# This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+> # This loads RVM into a shell session.
+
+> [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 
 //appname lo sustituimos por el nombre de la app que nos venga en gana
