@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @song.name %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @song.genero %>
+</p>
+<p>
+  <strong>Duracion:</strong>
+  <%= @song.duracion %>
+</p>
+<p>
+  <strong>Cantante:</strong>
+  <%= @song.cantante %>
+</p>
+<p>
+  <strong>Like:</strong>
+  <%= @song.like %>
+</p>
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
