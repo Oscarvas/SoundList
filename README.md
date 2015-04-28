@@ -2,9 +2,9 @@
 Data Mining Project
 
 
-> command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+''' command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 
-> \curl -sSL https://get.rvm.io | bash -s stable --rails
+\curl -sSL https://get.rvm.io | bash -s stable --rails '''
 
 
 
@@ -12,17 +12,17 @@ Data Mining Project
 // despues de haber instalado todo
 
 
-> source ~/.rvm/scripts/rvm
+''' source ~/.rvm/scripts/rvm
 
-> rvm install ruby
+ rvm install ruby
 
-> gem install rails
+ gem install rails '''
 
 
-//------------------ opcional
-> rvm gemset create prueba
+== Opcional
+''' rvm gemset create prueba
 
-> rvm ruby-2.2.0@prueba
+ rvm ruby-2.2.0@prueba '''
 
 
 //  necesario para arrancar terminal con el path incluido (abrir este archivo). Esto soluciona el problema de
@@ -34,9 +34,9 @@ Data Mining Project
 // agregar esto al final del document tal cual aparece aqui
 
 
-> # This loads RVM into a shell session.
+''' # This loads RVM into a shell session.
 
-> [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+ [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" '''
 
 
 //appname lo sustituimos por el nombre de la app que nos venga en gana
