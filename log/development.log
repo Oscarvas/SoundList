@@ -8718,3 +8718,304 @@ Started GET "/" for 127.0.0.1 at 2015-04-28 00:10:52 +0200
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/railties-4.1.9/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
 Completed 200 OK in 14ms (Views: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 01:34:49 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/railties-4.1.9/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 57ms (Views: 36.9ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2015-05-10 01:36:57 +0200
+Processing by Rails::InfoController#properties as HTML
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/railties-4.1.9/lib/rails/templates/rails/info/properties.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 32.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:27:16 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2526ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6297ms
+  Rendered users/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 227ms (Views: 207.8ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:27:17 +0200
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-05-10 02:28:18 +0200
+Processing by SongsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5018ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3164ms
+  Rendered songs/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 107ms (Views: 98.6ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:18 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:18 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:19 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-10 02:28:23 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4761ms
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 61ms (Views: 60.1ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:24 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3292ms
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 53.0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:27 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2765ms
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 45ms (Views: 44.4ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:28:35 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:33:16 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/railties-4.1.9/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 43ms (Views: 22.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:45:02 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/railties-4.1.9/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 16ms (Views: 8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:45:03 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/railties-4.1.9/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 483ms (Views: 474.2ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:57:50 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-10 02:59:28 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 56.1ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-10 02:59:29 +0200
