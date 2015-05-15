@@ -10726,3 +10726,92 @@ Processing by UsersController#index as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3622ms
   Rendered users/index.html.erb within layouts/application (2.8ms)
 Completed 200 OK in 105ms (Views: 104.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 00:53:33 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 212ms (Views: 204.4ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-16 00:53:33 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-16 00:53:33 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:33 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-16 00:53:33 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 00:53:34 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-16 00:54:12 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9539ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4909ms
+  Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 113ms (Views: 106.7ms)
