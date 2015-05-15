@@ -9379,3 +9379,875 @@ Processing by UsersController#index as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2584ms
   Rendered users/index.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 46ms (Views: 45.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-11 00:08:06 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 668ms (Views: 660.1ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-11 00:08:07 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-11 00:08:30 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2852ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5446ms
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 48.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-05-11 00:08:32 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (94.3ms)
+  Rendered users/new.html.erb within layouts/application (123.9ms)
+Completed 200 OK in 167ms (Views: 165.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-11 00:08:44 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFA99Wofmm6ORc+SVNobhrBqSdXIS6h1fHOrQVbf/eA=", "user"=>{"name"=>"yhtducyte", "email"=>"yutcejytcrdee", "age"=>"23", "sexo"=>"ixyte", "genero"=>"qqwr"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+Mongoid::Errors::NoParent (
+Problem:
+  Cannot persist embedded document User without a parent document.
+Summary:
+  If the document is embedded, in order to be persisted it must always have a reference to its parent document. This is most likely caused by either calling User.create or User.create! without setting the parent document as an attribute.
+Resolution:
+  Ensure that you've set the parent relation if instantiating the embedded document directly, or always create new embedded documents via the parent relation.):
+  app/controllers/users_controller.rb:32:in `block in create'
+  app/controllers/users_controller.rb:31:in `create'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-11 00:09:17 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4751ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2823ms
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 48ms (Views: 47.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-05-11 00:09:18 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 51ms (Views: 50.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-11 00:09:20 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFA99Wofmm6ORc+SVNobhrBqSdXIS6h1fHOrQVbf/eA=", "user"=>{"name"=>"", "email"=>"", "age"=>"", "sexo"=>"", "genero"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+Mongoid::Errors::NoParent (
+Problem:
+  Cannot persist embedded document User without a parent document.
+Summary:
+  If the document is embedded, in order to be persisted it must always have a reference to its parent document. This is most likely caused by either calling User.create or User.create! without setting the parent document as an attribute.
+Resolution:
+  Ensure that you've set the parent relation if instantiating the embedded document directly, or always create new embedded documents via the parent relation.):
+  app/controllers/users_controller.rb:32:in `block in create'
+  app/controllers/users_controller.rb:31:in `create'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-11 00:09:36 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFA99Wofmm6ORc+SVNobhrBqSdXIS6h1fHOrQVbf/eA=", "user"=>{"name"=>"sdf", "email"=>"asd@faf.com", "age"=>"5", "sexo"=>"", "genero"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+Mongoid::Errors::NoParent (
+Problem:
+  Cannot persist embedded document User without a parent document.
+Summary:
+  If the document is embedded, in order to be persisted it must always have a reference to its parent document. This is most likely caused by either calling User.create or User.create! without setting the parent document as an attribute.
+Resolution:
+  Ensure that you've set the parent relation if instantiating the embedded document directly, or always create new embedded documents via the parent relation.):
+  app/controllers/users_controller.rb:32:in `block in create'
+  app/controllers/users_controller.rb:31:in `create'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-11 00:10:02 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3744ms
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 53.1ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+Processing by SongsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5136ms
+  Rendered songs/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 59ms (Views: 52.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:08 +0200
+
+
+Started GET "/songs/new" for 127.0.0.1 at 2015-05-11 00:10:11 +0200
+Processing by SongsController#new as HTML
+  Rendered songs/_form.html.erb (3.7ms)
+  Rendered songs/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 66ms (Views: 64.9ms)
+
+
+Started POST "/songs" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFA99Wofmm6ORc+SVNobhrBqSdXIS6h1fHOrQVbf/eA=", "song"=>{"name"=>"eeqeeq", "genero"=>"qqqqqqq", "duracion"=>"34", "cantante"=>"asdadda", "like"=>"n"}, "commit"=>"Create Song"}
+  MOPED: 127.0.0.1:27017 INSERT       database=mongo_app_development collection=songs documents=[{"_id"=>BSON::ObjectId('554fd7537654681c75000000'), "name"=>"eeqeeq", "genero"=>"qqqqqqq", "duracion"=>34, "cantante"=>"asdadda", "like"=>"n"}] flags=[]
+                         COMMAND      database=mongo_app_development command={:getlasterror=>1, :w=>1} runtime: 2.0317ms
+Redirected to http://localhost:3000/songs/554fd7537654681c75000000
+Completed 302 Found in 5ms
+
+
+Started GET "/songs/554fd7537654681c75000000" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"554fd7537654681c75000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={"_id"=>BSON::ObjectId('554fd7537654681c75000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6913ms
+  Rendered songs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 50.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-11 00:10:27 +0200
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-05-11 00:10:31 +0200
+Processing by SongsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3458ms
+  Rendered songs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 53ms (Views: 52.3ms)
+
+
+Started GET "/songs/like" for 127.0.0.1 at 2015-05-11 00:10:55 +0200
+Processing by SongsController#like as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3155ms
+  Rendered songs/like.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 45.8ms)
+
+
+Started GET "/songs/like" for 127.0.0.1 at 2015-05-11 00:10:58 +0200
+Processing by SongsController#like as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3403ms
+  Rendered songs/like.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 44.7ms)
+
+
+Started GET "/songs/like" for 127.0.0.1 at 2015-05-11 00:10:59 +0200
+Processing by SongsController#like as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3933ms
+  Rendered songs/like.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 52ms (Views: 51.5ms)
+
+
+Started GET "/songs/like" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+Processing by SongsController#like as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3137ms
+  Rendered songs/like.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 62ms (Views: 61.1ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:01 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 64.1ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-11 00:11:14 +0200
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-05-11 00:12:32 +0200
+Processing by SongsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4018ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2739ms
+  Rendered songs/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 52ms (Views: 51.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-15 22:43:54 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 612ms (Views: 587.0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 22:43:55 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 22:44:00 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2911ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2590ms
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 96ms (Views: 64.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-05-15 22:44:20 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (98.5ms)
+  Rendered users/new.html.erb within layouts/application (116.1ms)
+Completed 200 OK in 179ms (Views: 178.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-15 22:44:50 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ5Fmg6tX7X7eZY+5Kn4DC+hKnB+ersykx8HSnyhjqs=", "user"=>{"name"=>"q", "email"=>"qa", "age"=>"5", "sexo"=>"m", "genero"=>"as"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+Mongoid::Errors::NoParent (
+Problem:
+  Cannot persist embedded document User without a parent document.
+Summary:
+  If the document is embedded, in order to be persisted it must always have a reference to its parent document. This is most likely caused by either calling User.create or User.create! without setting the parent document as an attribute.
+Resolution:
+  Ensure that you've set the parent relation if instantiating the embedded document directly, or always create new embedded documents via the parent relation.):
+  app/controllers/users_controller.rb:32:in `block in create'
+  app/controllers/users_controller.rb:31:in `create'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 53ms (Views: 52.8ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 22:51:25 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 22:51:27 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3354ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2757ms
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 45.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 3.1801ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7250ms
+  Rendered users/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 65ms (Views: 64.3ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 22:52:28 +0200
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-05-15 22:52:29 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.9ms)
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 48ms (Views: 47.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-15 22:52:32 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ5Fmg6tX7X7eZY+5Kn4DC+hKnB+ersykx8HSnyhjqs=", "user"=>{"name"=>"", "email"=>"", "age"=>"", "sexo"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+Mongoid::Errors::NoParent (
+Problem:
+  Cannot persist embedded document User without a parent document.
+Summary:
+  If the document is embedded, in order to be persisted it must always have a reference to its parent document. This is most likely caused by either calling User.create or User.create! without setting the parent document as an attribute.
+Resolution:
+  Ensure that you've set the parent relation if instantiating the embedded document directly, or always create new embedded documents via the parent relation.):
+  app/controllers/users_controller.rb:32:in `block in create'
+  app/controllers/users_controller.rb:31:in `create'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-15 22:53:41 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ5Fmg6tX7X7eZY+5Kn4DC+hKnB+ersykx8HSnyhjqs=", "user"=>{"name"=>"Oscar", "email"=>"oscar@vas.com", "age"=>"24", "sexo"=>"Hombre"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+Mongoid::Errors::NoParent (
+Problem:
+  Cannot persist embedded document User without a parent document.
+Summary:
+  If the document is embedded, in order to be persisted it must always have a reference to its parent document. This is most likely caused by either calling User.create or User.create! without setting the parent document as an attribute.
+Resolution:
+  Ensure that you've set the parent relation if instantiating the embedded document directly, or always create new embedded documents via the parent relation.):
+  app/controllers/users_controller.rb:32:in `block in create'
+  app/controllers/users_controller.rb:31:in `create'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-15 22:59:17 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ5Fmg6tX7X7eZY+5Kn4DC+hKnB+ersykx8HSnyhjqs=", "user"=>{"name"=>"Oscar", "email"=>"oscar@vas.com", "age"=>"24", "sexo"=>"Hombre"}, "commit"=>"Create User"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5149ms
+  MOPED: 127.0.0.1:27017 INSERT       database=mongo_app_development collection=users documents=[{"_id"=>BSON::ObjectId('55565e257654680d0d000000'), "name"=>"Oscar", "email"=>"oscar@vas.com", "age"=>24, "sexo"=>"Hombre"}] flags=[]
+                         COMMAND      database=mongo_app_development command={:getlasterror=>1, :w=>1} runtime: 170.0512ms
+Redirected to http://localhost:3000/users/55565e257654680d0d000000
+Completed 302 Found in 179ms
+
+
+Started GET "/users/55565e257654680d0d000000" for 127.0.0.1 at 2015-05-15 22:59:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55565e257654680d0d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1179ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2568ms
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined method `genero' for #<User:0x000000058812d8>):
+    22: 
+    23: <p>
+    24:   <strong>Genero:</strong>
+    25:   <%= @user.genero %>
+    26: </p>
+    27: <%= link_to 'Edit', edit_user_path(@user) %> |
+    28: <%= link_to 'Back', users_path %>
+  app/views/users/show.html.erb:25:in `_app_views_users_show_html_erb___3523264009842228375_46388960'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/oscar/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/users/55565e257654680d0d000000" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55565e257654680d0d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1965ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5679ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9693ms
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 109ms (Views: 96.2ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 23:00:28 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 23:00:33 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4098ms
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 49ms (Views: 48.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 66.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 23:01:30 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 23:01:34 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4266ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2604ms
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 55ms (Views: 54.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-05-15 23:01:36 +0200
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 46.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ5Fmg6tX7X7eZY+5Kn4DC+hKnB+ersykx8HSnyhjqs=", "user"=>{"name"=>"David", "email"=>"da@vid.com", "age"=>"25", "sexo"=>"asd"}, "commit"=>"Create User"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4597ms
+  MOPED: 127.0.0.1:27017 INSERT       database=mongo_app_development collection=users documents=[{"_id"=>BSON::ObjectId('55565eff7654680d0d010000'), "name"=>"David", "email"=>"da@vid.com", "age"=>25, "sexo"=>"asd"}] flags=[]
+                         COMMAND      database=mongo_app_development command={:getlasterror=>1, :w=>1} runtime: 8.3474ms
+Redirected to http://localhost:3000/users/55565eff7654680d0d010000
+Completed 302 Found in 12ms
+
+
+Started GET "/users/55565eff7654680d0d010000" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55565eff7654680d0d010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565eff7654680d0d010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3582ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565eff7654680d0d010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2057ms
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 185ms (Views: 182.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 23:02:55 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 23:03:01 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9590ms
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 55.2ms)
+
+
+Started GET "/users/55565e257654680d0d000000/edit" for 127.0.0.1 at 2015-05-15 23:03:04 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"55565e257654680d0d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3007ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1694ms
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/edit.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 100ms (Views: 98.4ms)
+
+
+Started PATCH "/users/55565e257654680d0d000000" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ5Fmg6tX7X7eZY+5Kn4DC+hKnB+ersykx8HSnyhjqs=", "user"=>{"name"=>"OscarDavid", "email"=>"oscar@vas.com", "age"=>"24", "sexo"=>"Hombre"}, "commit"=>"Update User", "id"=>"55565e257654680d0d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3046ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2029ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} update={"$set"=>{"name"=>"OscarDavid"}} flags=[]
+                         COMMAND      database=mongo_app_development command={:getlasterror=>1, :w=>1} runtime: 1.4545ms
+Redirected to http://localhost:3000/users/55565e257654680d0d000000
+Completed 302 Found in 5ms
+
+
+Started GET "/users/55565e257654680d0d000000" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55565e257654680d0d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2989ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={"_id"=>BSON::ObjectId('55565e257654680d0d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1777ms
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 42.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-15 23:04:41 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-15 23:05:06 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3438ms
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 47.8ms)
