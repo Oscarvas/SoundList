@@ -10815,3 +10815,203 @@ Processing by UsersController#index as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=mongo_app_development collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4909ms
   Rendered users/index.html.erb within layouts/application (9.0ms)
 Completed 200 OK in 113ms (Views: 106.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 01:00:35 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 264ms (Views: 255.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 01:00:36 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-16 01:00:38 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1324ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mineria collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3206ms
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 128ms (Views: 120.9ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-05-16 01:00:40 +0200
+Processing by SongsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mineria collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4064ms
+  Rendered songs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 120ms (Views: 114.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-16 02:14:31 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 66.2384ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mineria collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 6.9407ms
+  Rendered users/index.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 855ms (Views: 815.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 136ms (Views: 135.3ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-05-16 02:14:37 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-16 02:35:30 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4480ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mineria collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2436ms
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 96ms (Views: 95.2ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-05-16 02:35:33 +0200
+Processing by SongsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mineria collection=songs selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3030ms
+  Rendered songs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 143ms (Views: 133.7ms)

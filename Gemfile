@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#This is a ruby wrapper for the Spotify Web API
+# usage https://github.com/guilhermesad/rspotify
+gem 'rspotify'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
