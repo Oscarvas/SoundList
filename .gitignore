@@ -13,5 +13,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 /tmp
 log
+tmp
