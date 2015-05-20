@@ -1,4 +1,4 @@
-# Instalación del entorno de desarrollo
+# Instalación del entorno de desarrollo - SoundList
 Guía para sistemas Ubuntu 14.04.02 (sobre la versión 15 hay algunos problemas con MongoDB)
 
 ## Instalación CURL y RVM
