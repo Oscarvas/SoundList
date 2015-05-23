@@ -13,7 +13,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-RSpotify::authenticate('e92dd3df52654091af90b4737a973270', 'db96fd52c8a046f8bad2962f855d75e7')
+RSpotify::authenticate('e92dd3df52654091af90b4737a973270', '8f4fa425a87542cca4848e48c00647e9')
 
 module MongoApp
   class Application < Rails::Application
