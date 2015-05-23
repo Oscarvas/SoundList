@@ -56,13 +56,24 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-
+    user = User.find(params[:id])
+    user.destroy
+    flash[:success] = "User destroyed."
+    redirect_to users_url
   end
 
   def spotify
     spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
     # Now you can access user's private data, create playlists and much more
+    #hash = spotify_user.to_hash
+    # hash containing all user attributes, including access tokens
+    usuario = User.new
+    usuario.email = spotify_user.email
+    usuario.name = spotify_user.display_name
+    usuario.image = spotify_user.images
 
+    usuario.save
+    redirect_to users_url
     # Access private data
     #spotify_user.country #=> "US"
     #spotify_user.email   #=> "example@email.com"
@@ -85,18 +96,11 @@ class UsersController < ApplicationController
     #spotify_user.follows?(artists)
     #spotify_user.unfollow(users)
 
-    # Check doc for more
-
-    hash = spotify_user.to_hash
-    # hash containing all user attributes, including access tokens
-
     # Use the hash to persist the data the way you prefer...
 
     # Then recover the Spotify user whenever you like
     #spotify_user = RSpotify::User.new(hash)
     #spotify_user.create_playlist!('my_awesome_playlist') # automatically refreshes token
-
-    @users = User.all
 
   end
 
@@ -108,7 +112,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :age,:sexo)
+      params.require(:user).permit(:name, :email, :image)
     end
 
 end

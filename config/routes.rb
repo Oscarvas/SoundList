@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   get 'home/index'
   get "songs/like"
   get '/auth/spotify/callback', to: 'users#spotify'
-  get '/users/spotify', to: 'users#index'
+  #get '/auth/spotify', to: 'users#index'
   resources :songs
   resources :users
-  resources :spotify
+  #resources :spotify
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
