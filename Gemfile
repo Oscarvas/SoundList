@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
 #This is a ruby wrapper for the Spotify Web API
 # usage https://github.com/guilhermesad/rspotify
 gem 'rspotify'
