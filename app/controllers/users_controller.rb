@@ -63,14 +63,17 @@ class UsersController < ApplicationController
   end
 
   def spotify
-    spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+    #spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
     # Now you can access user's private data, create playlists and much more
-    hash = spotify_user.to_hash
+    #hash = spotify_user.to_hash
     # hash containing all user attributes, including access tokens
+
+    spotify_user = request.env['omniauth.auth']
+    hash = spotify_user.to_hash
     usuario = User.new
-    usuario.email = spotify_user.email
-    usuario.name = spotify_user.display_name
-    usuario.image = hash
+    usuario.email = spotify_user.info.email
+    usuario.name = spotify_user.info.name
+    usuario.image = spotify_user.info.image
 
     usuario.save
     redirect_to users_url
