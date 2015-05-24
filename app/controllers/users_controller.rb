@@ -69,7 +69,7 @@ class UsersController < ApplicationController
     # hash containing all user attributes, including access tokens
 
     spotify_user = request.env['omniauth.auth']
-    hash = spotify_user.to_hash
+    #hash = spotify_user.to_hash #esto lo estaba usando en usuario.image para ver el contenido de hash
     usuario = User.new
     usuario.email = spotify_user.info.email
     usuario.name = spotify_user.info.name
