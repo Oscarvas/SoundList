@@ -1,6 +1,9 @@
 # Instalación del entorno de desarrollo - SoundList
 Guía para sistemas Ubuntu 14.04.02 (sobre la versión 15 hay algunos problemas con MongoDB)
 
+#Tenemos pagina online para testing !!!!
+https://sound-list.herokuapp.com
+
 ## Instalación CURL y RVM
 
 ``` 
