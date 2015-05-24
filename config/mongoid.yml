@@ -70,10 +70,10 @@ test:
 production:
   sessions:
     default:
-      database: SoundList
-      hosts:
-        - localhost:27017
+      uri: <%= ENV['MONGOHQ_URL'] %>
       options:
+
+
         read: primary
         # In the test environment we lower the retries and retry interval to
         # low amounts for fast failures.
