@@ -75,6 +75,7 @@ class UsersController < ApplicationController
     usuario.email = spotify_user.info.email
     usuario.name = spotify_user.info.name
     usuario.image = spotify_user.info.image
+    usuario.otro = hash = spotify_user.to_hash
 
     usuario.save
     redirect_to users_url
