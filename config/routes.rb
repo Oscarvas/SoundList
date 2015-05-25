@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'home/index'
   get "songs/like"
-  get '/auth/spotify/callback', to: 'users#spotify'
+  get '/auth/:provider/callback', to: 'users#spotify'
   #get '/auth/spotify', to: 'users#index'
   resources :songs
   resources :users
