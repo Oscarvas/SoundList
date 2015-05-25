@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Image</th>
+      <th class="col-xs-9" >Name</th>
+      <th class="col-xs-9">Email</th>
+      <th class="col-xs-9">Image</th>
      <!-- <th>Lista De Conciones</th>-->
       <th colspan="5"></th>
     </tr>
@@ -16,7 +16,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td class="col-xs-9"><%= user.name %></td>
+        <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><img src=<%= user.image %> alt="User profile pic" </td>
        
