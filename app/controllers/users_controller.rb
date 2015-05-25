@@ -69,13 +69,14 @@ class UsersController < ApplicationController
     # hash containing all user attributes, including access tokens
 
     spotify_user = request.env['omniauth.auth']
+    usrRSpotify = RSpotify::User.new(request.env['omniauth.auth'])
     #render :text => spotify_user.inspect
     #hash = spotify_user.to_hash #esto lo estaba usando en usuario.image para ver el contenido de hash
     usuario = User.new
     usuario.email = spotify_user.info.email
     usuario.name = spotify_user.info.name
     usuario.image = spotify_user.info.image
-    usuario.otro = hash = spotify_user.to_hash
+    usuario.otro = usrRSpotify.saved_tracks.first.uri
 
     usuario.save
     redirect_to users_url

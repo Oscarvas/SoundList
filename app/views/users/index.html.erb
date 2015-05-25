@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th class="col-xs-9" >Name</th>
-      <th class="col-xs-9">Email</th>
+      <th class="col-xs-3">Name</th>
+      <th class="col-xs-3">Email</th>
       <th class="col-xs-9">Image</th>
      <!-- <th>Lista De Conciones</th>-->
       <th colspan="5"></th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><img src=<%= user.image %> alt="User profile pic" </td>
+        <td><iframe src="https://embed.spotify.com/?uri=<%= user.otro %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></td>
        
         <td><%= button_to 'Show', user %></td>
         <td><%= button_to 'Edit', edit_user_path(user) %></td>
