@@ -72,20 +72,14 @@ class UsersController < ApplicationController
     usrRSpotify = RSpotify::User.new(request.env['omniauth.auth'])
     #render :text => spotify_user.inspect
     #hash = spotify_user.to_hash #esto lo estaba usando en usuario.image para ver el contenido de hash
-    usuario = User.new
-    usuario.email = spotify_user.info.email
-    usuario.name = spotify_user.info.name
-    usuario.image = spotify_user.info.image
-    usuario.otro = usrRSpotify.saved_tracks.first.uri
-
-    usuario.save
-    redirect_to users_url
+    
+    
     # Access private data
     #spotify_user.country #=> "US"
     #spotify_user.email   #=> "example@email.com"
 
     # Create playlist in user's Spotify account
-    #playlist = spotify_user.create_playlist!('my-awesome-playlist')
+    #spotify_user.create_playlist!('soundListplaylist')
 
     # Add tracks to a playlist in user's Spotify account
     #tracks = RSpotify::Track.search('Know')
@@ -107,6 +101,16 @@ class UsersController < ApplicationController
     # Then recover the Spotify user whenever you like
     #spotify_user = RSpotify::User.new(hash)
     #spotify_user.create_playlist!('my_awesome_playlist') # automatically refreshes token
+
+    usuario = User.new
+    usuario.email = spotify_user.info.email
+    usuario.name = spotify_user.info.name
+    usuario.image = spotify_user.info.image
+    usuario.otro = usrRSpotify.saved_tracks.first.uri
+
+    usuario.save
+
+    redirect_to users_url
 
   end
 
