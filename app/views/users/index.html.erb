@@ -18,7 +18,13 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><iframe src="https://embed.spotify.com/?uri=<%= user.otro %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></td>
+        <td>
+          <% user.otro.each do |fav| %>
+            <iframe src="https://embed.spotify.com/?uri=<%= fav.uri %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+          <% end %>
+
+
+        
        
         <td><%= button_to 'Show', user %></td>
         <td><%= button_to 'Edit', edit_user_path(user) %></td>
@@ -32,4 +38,5 @@
 
 <!--
 <%= link_to 'New User', new_user_path %>
+<iframe src="https://embed.spotify.com/?uri=<%= user.otro %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></td>
 -->

@@ -106,7 +106,7 @@ class UsersController < ApplicationController
     usuario.email = spotify_user.info.email
     usuario.name = spotify_user.info.name
     usuario.image = spotify_user.info.image
-    usuario.otro = usrRSpotify.saved_tracks.first.uri
+    usuario.otro = Array.new(usrRSpotify.saved_tracks)
 
     usuario.save
 
