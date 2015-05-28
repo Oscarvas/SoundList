@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#indice para la mineria de datos
+gem 'jaccard', '~> 1.0.2'
+
 gem 'rails_12factor'
 #This is a ruby wrapper for the Spotify Web API
 # usage https://github.com/guilhermesad/rspotify
