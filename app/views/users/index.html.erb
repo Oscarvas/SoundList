@@ -1,6 +1,7 @@
 <h1>Listing users</h1>
 
 <a href="http://accounts.spotify.com">Salir de la cuenta</a>
+<%= link_to 'Signout', signout_path %>
 
 <table>
   <thead>
@@ -19,7 +20,7 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td>
-          <% user.otro.each do |fav| %>
+          <% user.saved.each do |fav| %>
             <iframe src="https://embed.spotify.com/?uri=<%= fav %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
           <% end %>
 

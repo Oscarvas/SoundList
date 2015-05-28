@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :destroy] #quitado :edit y :update
+  
+  #las siguientes lineas deberian estar funcionando pero dan problemas
+  #before_filter :authenticate_user!
+  #before_filter :correct_user?
+
 
   # GET /users
   # GET /users.json
@@ -60,62 +65,6 @@ class UsersController < ApplicationController
     user.destroy
     flash[:success] = "User destroyed."
     redirect_to users_url
-  end
-
-  def spotify
-    #spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
-    # Now you can access user's private data, create playlists and much more
-    #hash = spotify_user.to_hash
-    # hash containing all user attributes, including access tokens
-
-    spotify_user = request.env['omniauth.auth']
-    usrRSpotify = RSpotify::User.new(request.env['omniauth.auth'])
-    #render :text => spotify_user.inspect
-    #hash = spotify_user.to_hash #esto lo estaba usando en usuario.image para ver el contenido de hash
-    
-    
-    # Access private data
-    #spotify_user.country #=> "US"
-    #spotify_user.email   #=> "example@email.com"
-
-    # Create playlist in user's Spotify account
-    #spotify_user.create_playlist!('soundListplaylist')
-
-    # Add tracks to a playlist in user's Spotify account
-    #tracks = RSpotify::Track.search('Know')
-    #playlist.add_tracks!(tracks)
-    #playlist.tracks.first.name #=> "Somebody That I Used To Know"
-
-    # Access and modify user's music library
-    #spotify_user.save_tracks!(tracks)
-    #spotify_user.saved_tracks.size #=> 20
-    #spotify_user.remove_tracks!(tracks)
-
-    # Use Spotify Follow features
-    #spotify_user.follow(playlist)
-    #spotify_user.follows?(artists)
-    #spotify_user.unfollow(users)
-
-    # Use the hash to persist the data the way you prefer...
-
-    # Then recover the Spotify user whenever you like
-    #spotify_user = RSpotify::User.new(hash)
-    #spotify_user.create_playlist!('my_awesome_playlist') # automatically refreshes token
-
-    usuario = User.new
-    usuario.email = spotify_user.info.email
-    usuario.name = spotify_user.info.name
-    usuario.image = spotify_user.info.image
-
-    usuario.otro = Array.new
-    usrRSpotify.saved_tracks.each do |uri|
-      usuario.otro << uri.uri
-    end
-
-    usuario.save
-
-    redirect_to users_url
-
   end
 
   private
