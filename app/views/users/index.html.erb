@@ -7,7 +7,7 @@
     <tr>
       <th class="col-xs-3">Name</th>
       <th class="col-xs-3">Email</th>
-      <th class="col-xs-9">Image</th>
+      <th class="col-xs-9">Favorite Songs</th>
      <!-- <th>Lista De Conciones</th>-->
       <th colspan="5"></th>
     </tr>
@@ -20,15 +20,15 @@
         <td><%= user.email %></td>
         <td>
           <% user.otro.each do |fav| %>
-            <iframe src="https://embed.spotify.com/?uri=<%= fav.uri %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+            <iframe src="https://embed.spotify.com/?uri=<%= fav %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
           <% end %>
 
 
         
        
-        <td><%= button_to 'Show', user %></td>
-        <td><%= button_to 'Edit', edit_user_path(user) %></td>
-        <td><%= button_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,5 +38,4 @@
 
 <!--
 <%= link_to 'New User', new_user_path %>
-<iframe src="https://embed.spotify.com/?uri=<%= user.otro %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></td>
 -->

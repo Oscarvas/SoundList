@@ -106,7 +106,11 @@ class UsersController < ApplicationController
     usuario.email = spotify_user.info.email
     usuario.name = spotify_user.info.name
     usuario.image = spotify_user.info.image
-    usuario.otro = Array.new(usrRSpotify.saved_tracks)
+
+    usuario.otro = Array.new
+    usrRSpotify.saved_tracks.each do |uri|
+      usuario.otro << uri.uri
+    end
 
     usuario.save
 
