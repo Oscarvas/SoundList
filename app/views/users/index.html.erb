@@ -1,15 +1,10 @@
 <h1>Listing users</h1>
 
-<%= link_to 'Cierre de sesion', endsession_path %>
-<br>
-<%= link_to 'Signout', signout_path %>
-
 <table>
   <thead>
     <tr>
       <th class="col-xs-3">Name</th>
       <th class="col-xs-3">Email</th>
-      <th class="col-xs-9">Favorite Songs</th>
      <!-- <th>Lista De Conciones</th>-->
       <th colspan="5"></th>
     </tr>
@@ -21,21 +16,7 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td>
-          <% user.saved.each do |fav| %>
-            <%if fav %>
-              <audio preload="auto" controls="controls" src="<%= fav %>" id='player'></audio>
-              <div>
-                <button onclick="document.getElementById('player').play();">Reproducir</button>
-                <button onclick="document.getElementById('player').pause();">Pausa</button>
-                <button onclick="document.getElementById('player').volume += 0.1;">Subir Volumen</button>
-                <button onclick="document.getElementById('player').volume -= 0.1;">Bajar Volumen</button>
-              </div>
-            <% end %>
-          <% end %>
-
-
-        
-       
+              
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

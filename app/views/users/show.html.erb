@@ -1,4 +1,4 @@
-<h3><%= current_user.name %></h3>
+<h3><%= current_user.name %></h3><%= link_to 'Lista de usuarios', users_path %>
 
 <table>
   <thead>
@@ -13,14 +13,15 @@
 
   <tbody>
     <% current_user.saved.each do |fav| %>
-      <tr>
-        <td></td>
-        <td></td>
-        <td>
-        	<%if fav %>
-              <audio preload="auto" controls="controls" src="<%= fav %>" id='player'></audio>
-            <% end %>
-      </tr>
+    	<%if fav[:preview_url] %> <!-- Solo las canciones que tengan enlace de preview>-->
+	      	<tr>
+		        <td><%= fav[:title] %></td>
+		        <td><%= fav[:artist] %></td>
+		        <td>
+		        	<audio preload="auto" controls="controls" src="<%= fav[:preview_url] %>" id='player'></audio>
+		        </td>
+	      	</tr>
+      	<% end %>
     <% end %>
   </tbody>
 </table>
