@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   	if !user.email
   		redirect_to edit_user_path(user), :alert => 'Please enter your email address.'
 	else
-  		redirect_to users_path, :notice => 'Signed in!'#esto deberia redirigir a root_path
+  		redirect_to user, :notice => 'Signed in!'#esto deberia redirigir a root_path
   	end 
 
   end

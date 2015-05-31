@@ -6,7 +6,7 @@ class User
   field :email, type: String
   field :image, type: String
   field :saved, type: Array
-  #embedded_in :song
+  has_many :song
 
   validates_uniqueness_of :email
 

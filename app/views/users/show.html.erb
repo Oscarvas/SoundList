@@ -1,3 +1,26 @@
-<h3>User Profile</h3>
-<p>Name: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<h3><%= current_user.name %></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th class="col-xs-3">Title</th>
+      <th class="col-xs-3">Artist</th>
+      <th class="col-xs-9">Preview</th>
+     <!-- <th>Lista De Conciones</th>-->
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.saved.each do |fav| %>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+        	<%if fav %>
+              <audio preload="auto" controls="controls" src="<%= fav %>" id='player'></audio>
+            <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

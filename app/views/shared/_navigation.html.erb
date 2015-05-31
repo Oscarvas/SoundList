@@ -1,9 +1,12 @@
 <% if user_signed_in? %>
   <li>
-  Logged in as <%= current_user.name %>
+  Logged in as <%= current_user.email %>
   </li>
   <li>
   <%= link_to('Logout', signout_path) %>
+  </li>
+  <li>
+  <%= link_to 'Cierre de sesion Spotify/Facebook', endsession_path %>
   </li>
 <% else %>
   <li>

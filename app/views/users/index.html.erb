@@ -1,6 +1,6 @@
 <h1>Listing users</h1>
 
-<a href="http://accounts.spotify.com">Salir de la cuenta</a>
+<%= link_to 'Cierre de sesion', endsession_path %>
 <br>
 <%= link_to 'Signout', signout_path %>
 
@@ -23,7 +23,13 @@
         <td>
           <% user.saved.each do |fav| %>
             <%if fav %>
-              <audio preload="auto" controls="controls" src="<%= fav %>"></audio>
+              <audio preload="auto" controls="controls" src="<%= fav %>" id='player'></audio>
+              <div>
+                <button onclick="document.getElementById('player').play();">Reproducir</button>
+                <button onclick="document.getElementById('player').pause();">Pausa</button>
+                <button onclick="document.getElementById('player').volume += 0.1;">Subir Volumen</button>
+                <button onclick="document.getElementById('player').volume -= 0.1;">Bajar Volumen</button>
+              </div>
             <% end %>
           <% end %>
 

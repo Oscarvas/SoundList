@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', :to => 'sessions#create'
   get '/auth/failure', :to => 'sessions#failure'
   get '/signout', :to => 'sessions#destroy', :as => :signout
+  get "/spotify", to: redirect('http://accounts.spotify.com'), :as => :endsession
 
   #get '/auth/:provider/callback', to: 'users#spotify'
   #get '/auth/spotify', to: 'users#index'
