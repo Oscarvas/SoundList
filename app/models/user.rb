@@ -22,7 +22,7 @@ class User
 		   user.saved = Array.new
 		   spoty = RSpotify::User.new(auth)
 		   spoty.saved_tracks.each do |prev|
-		   	user.saved << { title: prev.name, artist: prev.artists.first.name, preview_url: prev.preview_url}
+		   	user.saved << { "title": prev.name,"artist": prev.artists.first.name,"preview_url": prev.preview_url}
 		   end
 		end
 	end
