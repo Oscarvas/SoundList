@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#heroku fallaba al cargar cierto modelo de datos
+gem 'ruby', '~> 2.2.1'
+
 #indice para la mineria de datos
 gem 'jaccard', '~> 1.0.2'
 
