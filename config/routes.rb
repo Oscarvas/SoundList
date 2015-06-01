@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get '/genre', :to => 'genre#index'
+
   get 'home/index'
   #get "songs/like"
 
@@ -8,12 +10,11 @@ Rails.application.routes.draw do
   get '/auth/failure', :to => 'sessions#failure'
   get '/signout', :to => 'sessions#destroy', :as => :signout
   get "/spotify", to: redirect('http://accounts.spotify.com'), :as => :endsession
-
   #get '/auth/:provider/callback', to: 'users#spotify'
   #get '/auth/spotify', to: 'users#index'
   resources :songs
   resources :users
-  #resources :spotify
+  resources :genre
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
