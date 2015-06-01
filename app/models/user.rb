@@ -21,7 +21,7 @@ class User
 
 		   spoty = RSpotify::User.new(auth)
 		   spoty.saved_tracks.each do |prev|
-        Song.create( name: prev.name, preview: prev.preview_url, artist: prev.artists.first.name, user_id: user.uid)		   	
+        user.songs << Song.new( name: prev.name, preview: prev.preview_url, artist: prev.artists.first.name)
 		   end
        
 
