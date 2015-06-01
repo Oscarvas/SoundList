@@ -5,5 +5,5 @@ class Song
   field :artist, type: String
   field :like, type: Boolean
 
-  #belongs_to :user
+  belongs_to :user
 end
