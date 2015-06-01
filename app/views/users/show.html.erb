@@ -12,10 +12,10 @@
   </thead>
 
   <tbody>
-    <% current_user.saved.each do |fav| %>
-    	<%if fav[:preview_url] %> <!-- Solo las canciones que tengan enlace de preview>-->
+    <% current_user.songs.each do |fav| %>
+    	<%if fav[:preview] %> <!-- Solo las canciones que tengan enlace de preview>-->
 	      	<tr>
-		        <td><%= fav[:title] %></td>
+		        <td><%= fav[:name] %></td>
 		        <td><%= fav[:artist] %></td>
 		        <td>
 		        	<audio preload="auto" controls="controls" src="<%= fav[:preview_url] %>" id='player'></audio>

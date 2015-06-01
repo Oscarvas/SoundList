@@ -5,7 +5,7 @@ class User
   field :name, type: String
   field :email, type: String
   field :image, type: String
-  field :saved, type: Array
+
   has_many :songs
 
   validates_uniqueness_of :email
@@ -19,11 +19,12 @@ class User
 		   user.email = auth['info']['email'] || ""
 		   user.image = auth['info']['image'] || ""
 
-		   user.saved = Array.new
 		   spoty = RSpotify::User.new(auth)
 		   spoty.saved_tracks.each do |prev|
-		   	user.saved << { "title": prev.name,"artist": prev.artists.first.name,"preview_url": prev.preview_url}
+        Song.create( name: prev.name, preview: prev.preview_url, artist: prev.artists.first.name, user_id: user.uid)		   	
 		   end
+       
+
 		end
 	end
   end
@@ -39,7 +40,7 @@ class User
   private
 
   def user_params
-  	params.require(:user).permit(:uid, :email, :name, :saved, :image, :provider)
+  	params.require(:user).permit(:uid, :email, :name, :image, :provider)
   end
 
 end

@@ -8,6 +8,12 @@
   <li>
   <%= link_to 'Cierre de sesion Spotify/Facebook', endsession_path %>
   </li>
+  <li>
+  <%= link_to 'Canciones', songs_path %>
+  </li>
+  <li>
+  <%= link_to 'Usuarios', users_path %>
+  </li>
 <% else %>
   <li>
   <%= link_to('Login', signin_path)  %>
