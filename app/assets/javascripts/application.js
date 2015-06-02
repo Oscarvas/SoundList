@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require tree .
+//= require_tree .
 //= require bootstrap-sprockets
-//= require echonest-ruby-api

@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 #heroku fallaba al cargar cierto modelo de datos
 ruby "2.2.1"
 
+
+gem 'echonest-ruby-api'
+
 #indice para la mineria de datos
 gem 'jaccard', '~> 1.0.2'
 
@@ -42,9 +45,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'jquery-rails'
-
-gem 'echonest-ruby-api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
