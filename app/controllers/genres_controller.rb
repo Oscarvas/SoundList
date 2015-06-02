@@ -4,29 +4,7 @@ class GenresController < ApplicationController
   # GET /genres
   # GET /genres.json
   def index
-    redirect_to 'url = "http://developer.echonest.com/api/v4/genre/list";'
-    $.getJSON(url, {api_key:S6YKWF6QCDG012BBJ , results:2000, bucket:["description", "urls"]}, function(data) {
-        glist = $('#genre');
-        var noDescriptionCount = 0;
-        genreList = data.response.genres;
-        _.each(data.response.genres, function(genre, i) {
-            genre.which = i;
-            allGenres[genre.name] = genre;
-            var opt = $("<option>").attr('value', genre.name).text(genre.name);
-            glist.append(opt);
-            if (genre.description.length == 0) {
-                noDescriptionCount += 1;
-            } else {
-                fullGenreList.push(genre);
-            }
-        });
-        console.log("Genres with no description " + noDescriptionCount);
-        $(".chzn-select").chosen().change(function() {
-            newGenre();
-        });
-        processParams();
-    });
-}
+    @genres = Genre.all  
   end
 
   # GET /genres/1
