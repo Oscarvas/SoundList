@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :genres
 
-  get '/genre', :to => 'genre#index'
+  get '/genres', :to => 'genres#index'
 
   get 'home/index'
   #get "songs/like"
