@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :genres
+
   get '/genre', :to => 'genre#index'
 
   get 'home/index'
