@@ -11,22 +11,15 @@ class User
   validates_uniqueness_of :email
 
   def self.create_with_omniauth(auth)
-	create! do |user|
-		user.provider = auth['provider']
-		user.uid = auth['uid']
-		if auth['info']
-		   user.name = auth['info']['name'] || ""
-		   user.email = auth['info']['email'] || ""
-		   user.image = auth['info']['image'] || ""
-
-		   spoty = RSpotify::User.new(auth)
-		   spoty.saved_tracks.each do |prev|
-        user.songs << Song.new( name: prev.name, preview: prev.preview_url, artist: prev.artists.first.name)
-		   end
-       
-
-		end
-	end
+  	create! do |user|
+  		user.provider = auth['provider']
+  		user.uid = auth['uid']
+  		if auth['info']
+  		   user.name = auth['info']['name'] || ""
+  		   user.email = auth['info']['email'] || ""
+  		   user.image = auth['info']['image'] || ""
+  		end
+  	end
   end
 
   #mopped problem
