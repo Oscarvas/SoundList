@@ -9,8 +9,21 @@
   <%= @song.artist %>
 </p>
 <p>
+  <strong>Preview!:</strong>
+    <%if @song.preview %> 
+    	<audio preload controls src="<%= @song.preview %>" id="player"></audio>
+    	<!--<div>
+			<button onclick="document.getElementById('player').play()">Play</button>
+			<button onclick="document.getElementById('player').pause()">Pause</button>
+		</div>-->
+	<% else %>
+		No se dispone de preview para esta cancion
+    <% end %>
+
+</p>
+<p>
   <strong>Like:</strong>
   <%= @song.like %>
 </p>
-<%= link_to 'Edit', edit_song_path(@song) %> |
+
 <%= link_to 'Back', songs_path %>
