@@ -5,12 +5,14 @@ class GenresController < ApplicationController
   # GET /genres.json
   def index
     @genre = Genre.all
+    link_to get
   end
 
   def get
     gen = Echonest::Genre.list('S6YKWF6QCDG012BBJ')
-    for gen ["genres"] in @genre do
-      @genre = Genre.new
+    json = JSON.parse(gen)
+    json ["genres"] do |genre|
+      genre = Genre.new
     end
   end
   # GET /genres/1
