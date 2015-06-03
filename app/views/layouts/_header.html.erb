@@ -1,0 +1,20 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "SoundList", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Log out', signout_path %></li>
+          <li><%= link_to 'Cierre de sesion Spotify', endsession_path %></li>
+          <li><%= link_to 'Canciones', songs_path %></li>
+          <li><%= link_to 'Usuarios', users_path %></li>
+          <li><%= link_to 'Genre', '/genres' %></li>
+          <li>Logged in as <%= current_user.email %></li>
+        <% else %>
+          <li><%= link_to 'Log in', signin_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

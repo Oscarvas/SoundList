@@ -1,3 +1,5 @@
+<br>
+<div class="container">
 <h3><%= current_user.name %></h3><%= link_to 'Lista de usuarios', users_path %>
 
 <table>
@@ -6,7 +8,6 @@
       <th class="col-xs-3">Title</th>
       <th class="col-xs-3">Artist</th>
       <th class="col-xs-9">Preview</th>
-     <!-- <th>Lista De Conciones</th>-->
       <th colspan="5"></th>
     </tr>
   </thead>
@@ -18,10 +19,31 @@
 		        <td><%= fav.name %></td>
 		        <td><%= fav.artist %></td>
 		        <td>
-		        	<audio controls="controls" src="<%= fav.preview %>"></audio>
+		        	<audio controls id='<%= fav.name %>' src="<%= fav.preview %>"></audio>
 		        </td>
 	      	</tr>
       	<% end %>
     <% end %>
   </tbody>
 </table>
+</div>
+
+<!--
+<div class="btn-group btn-group-justified">                
+                
+              <-%-= content_tag(:button, image_tag("Rounded buttons/png/listen-green.png", :size => "170x50"), :type => "button",:onclick => "aud_play_pause();") %>
+
+                <script>
+                var myAudio=document.getElementById('<-%-= fav.name %>');
+
+                function aud_play_pause(){
+                  if (myAudio.paused){
+                      myAudio.play();
+                  } else {
+                      myAudio.pause();
+                  }
+                }
+                </script>
+                
+              </div>
+-->
