@@ -4,16 +4,11 @@ class GenresController < ApplicationController
   # GET /genres
   # GET /genres.json
   def index
-    @genre = Genre.all
-    link_to get
+    
   end
 
   def get
-    gen = Echonest::Genre.list('S6YKWF6QCDG012BBJ')
-    json = JSON.parse(gen)
-    json ["genres"] do |genre|
-      genre = Genre.new
-    end
+    
   end
   # GET /genres/1
   # GET /genres/1.json
@@ -68,6 +63,12 @@ class GenresController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def getArtist (genre)
+    artist = Echonest::Genre.artist('S6YKWF6QCDG012BBJ', genre)
+    #similar = Echonest::Genre.similar ('S6YKWF6QCDG012BBJ', genre)
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
