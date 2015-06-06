@@ -4,7 +4,9 @@ class GenresController < ApplicationController
   # GET /genres
   # GET /genres.json
   def index
-    
+    def a
+      
+    end
   end
 
   def get
