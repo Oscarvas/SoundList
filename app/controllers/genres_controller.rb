@@ -1,12 +1,10 @@
 class GenresController < ApplicationController
-  before_action :set_genre, only: [:show, :edit, :update, :destroy]
+  before_action :set_genre, only: [:show, :edit, :update, :destroy, :aaa]
 
   # GET /genres
   # GET /genres.json
   def index
-    def a
-      
-    end
+    
   end
 
   def get
@@ -24,6 +22,11 @@ class GenresController < ApplicationController
 
   # GET /genres/1/edit
   def edit
+
+  end
+
+  def aaa 
+    redirect_to genres_url, notice: 'ha enlazado bien'
   end
 
   # POST /genres
@@ -67,7 +70,8 @@ class GenresController < ApplicationController
   end
 
   def getArtist (genre)
-    artist = Echonest::Genre.artist('S6YKWF6QCDG012BBJ', genre)
+    redirect_to genres_url, notice: 'Genre was successfully destroyed.'
+    #artist = Echonest::Genre.artist('S6YKWF6QCDG012BBJ', genre)
     #similar = Echonest::Genre.similar ('S6YKWF6QCDG012BBJ', genre)
   end
 
