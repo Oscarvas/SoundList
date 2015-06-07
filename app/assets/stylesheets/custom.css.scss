@@ -7,6 +7,19 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+ul {
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    padding: 0;
+}
+.dropdown li a {
+    text-decoration: none;
+}
+
+/* arriba, mi codigo */
+
 body {
   padding-top: 60px;
 }
