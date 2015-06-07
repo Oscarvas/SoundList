@@ -3,16 +3,16 @@
   <h3><%= @user.name %></h3>
 <div class="container">
 
-  <div class="dropdown-container" style="display:inline-block" width="50%">
+  <div class="dropdown-container" style="display:inline-block" >
     <ul class="dropdown">
-    <li>
-      <h3>Lista de canciones</h3>
+    <li style="height:30%">
+      <h4>Lista de canciones</h4>
     </li>
     <% @user.songs.each do |fav| %>
       <%if fav.preview %> <!-- Solo las canciones que tengan enlace de preview>-->
-        <li class ="hide" >
-          <span><%= fav.name %></span>
-          <span><%= fav.artist %></span>
+        <li class ="hide" style="height:460px">
+          <h4><%= fav.artist %></h4>
+          <h4><%= fav.name %></h4>
           <audio controls id='<%= fav.name %>' src="<%= fav.preview %>"></audio>
         </li>
         <% end %>
@@ -20,7 +20,7 @@
     </ul>
   </div>
 
-  <div class="right" style="display:inline-block" width="25%">
+  <div class="right" style="display:inline-block" >
     <a href="javascript:void(0)">
       <i class="glyphicon glyphicon-chevron-right"></i>
     </a>
