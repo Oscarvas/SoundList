@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   
-  resources :genres
-
   get '/genres', :to => 'genres#index'
-
   get 'home/index'
   #get "songs/like"
 
+  match '/genres/artista' => 'genres#getArtist', via: [:get, :post]
   get '/signin', :to => 'sessions#new', :as => :signin
   get '/auth/:provider/callback', :to => 'sessions#create'
   get '/auth/failure', :to => 'sessions#failure'

@@ -17,17 +17,18 @@
   
 <br>
 <div id = "selected">
-  <form >
+  <form id = "form" action="/genres/artista" method="POST">
     <select id = "despues" name = "seleccionados" multiple = "multiple">
       <option> Selected</option>
 
     </select>
     <input type = "button" value= "Delete" id = "delete" />
-    <input type = "button" value="Go" id = "go" />
-
+    <input type = "submit" value="Go" id = "go" />
   </form>
 </div>
 <p></p>
+
+<div id = "result"> </div>
 <script type="text/javascript">
   $("#antes").change (function (){
     var str = "";
@@ -43,24 +44,31 @@
       $(this).remove();     
     });
   });
-  $("#go").click (function(){
+  $("#go").submit (function(){
     var a = [];
+    var i = 0;
     $("#despues option").each (function(){
-      if ($(this).val() != 'Selected')
-        a.push ($(this).val());     
+      if ($(this).val() != 'Selected'){
+        a [i] = new Object ();
+        a [i].generos = $(this).val();   
+      }
+      i++;  
     });
     go (a);
   });
 
   function go (gen){
-    
    $.ajax({
-      type: 'POST',
-      url: '/genres/aaa', 
+      url: "/genres/artista",
       data: gen,
-   });
-   alert (gen);
- }
+      success: function(){
+        $("#result").html(response.par);
+      },
+      error:function(){
+        $("#result").html('there is error while submit');
+      }
+    });    
+  }
 </script>
 
 

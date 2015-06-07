@@ -1,7 +1,6 @@
 class GenresController < ApplicationController
-  before_action :set_genre, only: [:show, :edit, :update, :destroy, :aaa]
-
-  # GET /genres
+  skip_before_filter :getArtist  
+   # GET /genres
   # GET /genres.json
   def index
     
@@ -26,7 +25,13 @@ class GenresController < ApplicationController
   end
 
   def aaa 
-    redirect_to genres_url, notice: 'ha enlazado bien'
+    
+    respond_to do |format|
+      format.html # contact.html.erb
+      format.json {
+        render :response => {:par => par}
+      }
+    end
   end
 
   # POST /genres
@@ -69,10 +74,43 @@ class GenresController < ApplicationController
     end
   end
 
-  def getArtist (genre)
-    redirect_to genres_url, notice: 'Genre was successfully destroyed.'
-    #artist = Echonest::Genre.artist('S6YKWF6QCDG012BBJ', genre)
-    #similar = Echonest::Genre.similar ('S6YKWF6QCDG012BBJ', genre)
+  def getArtist 
+    genr = params [:gen]
+    respond_to do |format|
+      format.html # contact.html.erb
+      format.json {
+        render :response => {:gen => genr}
+      }
+    end
+    lista_generos = []
+    genr.each do |gen|{
+      lista_generos.push (gen)
+      similar = Echonest::Genre.similar ('S6YKWF6QCDG012BBJ', gen, result: 5)
+      g = similar.to_json
+      json = JSON.parse (g)
+      json['genres'].each do |genress| {
+        genr.push (genress['name'])
+      }
+    }
+    lista_artistas = []
+    lista_generos.each do |genero|{
+      artist = Echonest::Genre.artist('S6YKWF6QCDG012BBJ', genero, result: 10)
+      g = artist.to_json
+      json = JSON.parse (g)
+      json['artists'].each do |a| {
+        lista_artistas << a['id']
+      }
+    }
+    lista_canciones = []
+    lista_artistas.each do |artista|{
+      song = Echonest::Artist.songs('S6YKWF6QCDG012BBJ', artista, result: 3)
+      g = artist.to_json
+      json = JSON.parse (g)
+      json['songs'].each do |a| {
+      lista_canciones << a['id']
+      }
+    }
+
   end
 
 
