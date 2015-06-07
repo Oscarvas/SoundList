@@ -1,5 +1,4 @@
 class GenresController < ApplicationController
-  require 'echonest-ruby-api'
   skip_before_filter :getArtist  
    # GET /genres
   # GET /genres.json
