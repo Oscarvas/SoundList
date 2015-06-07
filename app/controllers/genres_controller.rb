@@ -1,4 +1,5 @@
 class GenresController < ApplicationController
+  require 'echonest-ruby-api'
   skip_before_filter :getArtist  
    # GET /genres
   # GET /genres.json
@@ -83,9 +84,9 @@ class GenresController < ApplicationController
       }
     end
     lista_generos = []
-    genr.each do |gen|
-      lista_generos.push (gen)
-      similar = Echonest::Genre.similar ('S6YKWF6QCDG012BBJ', gen, result: 5)
+    genr.each do |generisimo|
+      lista_generos.push (generisimo)
+      similar = Echonest::Genre.similar('S6YKWF6QCDG012BBJ', generisimo, result: 5)
       g = similar.to_json
       json = JSON.parse (g)
       json['genres'].each do |genress| 
