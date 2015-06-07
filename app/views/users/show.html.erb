@@ -1,3 +1,30 @@
+<script>
+  var cur = 0;
+  $(function() {
+    $('.left').click(function() {
+          if(cur <= 0) return;
+          var last = cur;
+          cur --;
+          $('.dropdown li').eq(last).addClass('hide');
+          $('.dropdown li').eq(cur).css('margin-top', '-5px').removeClass('hide');
+          $('.dropdown li').eq(cur).animate({marginTop: '0px'}, 'fast', function(){
+              $(this).removeClass('hide');
+          });
+          
+    });
+
+    $('.right').click(function() {
+          if(cur >= $('.dropdown li').length - 1) return;
+          var last = cur;
+          cur ++;
+          $('.dropdown li').eq(last).addClass('hide');
+          $('.dropdown li').eq(cur).css('margin-top', '5px').removeClass('hide');
+          $('.dropdown li').eq(cur).animate({marginTop: '0px'}, 'fast', function(){
+              $(this).removeClass('hide');
+          });
+    });
+  });
+</script>
 <br>
 
   <h3><%= @user.name %></h3>
