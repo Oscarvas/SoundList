@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
         #end
         user.songs << Song.new( name: prev.name, preview: prev.preview_url, artist: prev.artists.first.name)
       end
-  		redirect_to user, :notice => 'Signed in!'#esto deberia redirigir a root_path
+  		redirect_to user#, :notice => 'Signed in!'#esto deberia redirigir a root_path
   	end 
 
   end
@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
 
   def destroy
   	reset_session
-  	redirect_to root_url, :notice => 'Signed out!'
+  	redirect_to root_url#, :notice => 'Signed out!'
   end
 
 end
