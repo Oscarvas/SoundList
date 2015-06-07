@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get '/genres', :to => 'genres#index'
+  #get '/genres', :to => 'genres#index'
   get 'home/index'
   #get "songs/like"
 
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #get '/auth/spotify', to: 'users#index'
   resources :songs
   resources :users
-  resources :genre
+  resources :genres
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

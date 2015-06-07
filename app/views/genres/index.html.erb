@@ -1,74 +1,24 @@
+<h1>Listing genres of <% current_user %> </h1>
 
-<h1>What music do you like to listen today?</h1>
-<% 
-  require 'json'
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
 
-  gen = Echonest::Genre.list('S6YKWF6QCDG012BBJ')
-  g = gen.to_json
-  json = JSON.parse (g)%>
-  <div id = "multiples">
-    <select id = "antes" name = "genres [name_genre]"  multiple="multiple ">
-      <%= json['genres'].each do |genress| %>
-          <option><%= genress['name'] %></option>     
+  <tbody>
+    <% current_user.genres.each do |genre| %>
+      <tr>
+        <td><%= genre.name %></td>
+        <td><%= link_to 'Show', genre %></td>
+        <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
         
-      <%end%>
-    </select>
-  </div>
-  
+        <td><%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <br>
-<div id = "selected">
-  <form id = "form" action="/genres/artista" method="POST">
-    <select id = "despues" name = "seleccionados" multiple = "multiple">
-      <option> Selected</option>
-
-    </select>
-    <input type = "button" value= "Delete" id = "delete" />
-    <input type = "submit" value="Go" id = "go" />
-  </form>
-</div>
-<p></p>
-
-<div id = "result"> </div>
-<script type="text/javascript">
-  $("#antes").change (function (){
-    var str = "";
-    $("#antes option:selected").each (function(){
-      str = $(this).text() + "\n";
-      
-    });
-    $("#despues").append ('<option> '+str+' </option>');
-  }).change();
-
-  $("#delete").click (function(){
-    $("#despues option:selected").each (function(){
-      $(this).remove();     
-    });
-  });
-  $("#go").submit (function(){
-    var a = [];
-    var i = 0;
-    $("#despues option").each (function(){
-      if ($(this).val() != 'Selected'){
-        a [i] = new Object ();
-        a [i].generos = $(this).val();   
-      }
-      i++;  
-    });
-    go (a);
-  });
-
-  function go (gen){
-   $.ajax({
-      url: "/genres/artista",
-      data: gen,
-      success: function(){
-        $("#result").html(response.par);
-      },
-      error:function(){
-        $("#result").html('there is error while submit');
-      }
-    });    
-  }
-</script>
-
-
