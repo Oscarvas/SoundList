@@ -7,6 +7,7 @@ class User
   field :image, type: String
 
   has_many :songs
+  has_many :genres
 
   validates_uniqueness_of :email
 
