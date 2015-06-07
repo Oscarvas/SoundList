@@ -3,8 +3,8 @@
     <%= link_to "SoundList", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
+          <li><%= link_to "Home", @user_path %></li>
           <li><%= link_to 'Log out', signout_path %></li>
           <li><%= link_to 'Cierre de sesion Spotify', endsession_path %></li>
           <li><%= link_to 'Canciones', songs_path %></li>
