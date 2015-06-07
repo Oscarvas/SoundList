@@ -1,31 +1,31 @@
 <br>
+
+  <h3><%= @user.name %></h3>
 <div class="container">
-<h3><%= current_user.name %></h3><%= link_to 'Lista de usuarios', users_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th class="col-xs-3">Title</th>
-      <th class="col-xs-3">Artist</th>
-      <th class="col-xs-9">Preview</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% current_user.songs.each do |fav| %>
-    	<%if fav.preview %> <!-- Solo las canciones que tengan enlace de preview>-->
-	      	<tr>
-		        <td><%= fav.name %></td>
-		        <td><%= fav.artist %></td>
-		        <td>
-		        	<audio controls id='<%= fav.name %>' src="<%= fav.preview %>"></audio>
-		        </td>
-	      	</tr>
-      	<% end %>
+  <div class="dropdown-container" style="display:inline-block" width="50%">
+    <ul class="dropdown">
+    <li>
+      <h3>Lista de canciones</h3>
+    </li>
+    <% @user.songs.each do |fav| %>
+      <%if fav.preview %> <!-- Solo las canciones que tengan enlace de preview>-->
+        <li class ="hide" >
+          <span><%= fav.name %></span>
+          <span><%= fav.artist %></span>
+          <audio controls id='<%= fav.name %>' src="<%= fav.preview %>"></audio>
+        </li>
+        <% end %>
     <% end %>
-  </tbody>
-</table>
+    </ul>
+  </div>
+
+  <div class="right" style="display:inline-block" width="25%">
+    <a href="javascript:void(0)">
+      <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+  </div>
+
 </div>
 
 <!--

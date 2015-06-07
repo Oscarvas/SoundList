@@ -5,6 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+    var cur = 0;
+    $(function() {
+      $('.left').click(function() {
+            if(cur <= 0) return;
+            var last = cur;
+            cur --;
+            $('.dropdown li').eq(last).addClass('hide');
+            $('.dropdown li').eq(cur).css('margin-top', '-5px').removeClass('hide');
+            $('.dropdown li').eq(cur).animate({marginTop: '0px'}, 'fast', function(){
+                $(this).removeClass('hide');
+            });
+            
+      });
+
+      $('.right').click(function() {
+            if(cur >= $('.dropdown li').length - 1) return;
+            var last = cur;
+            cur ++;
+            $('.dropdown li').eq(last).addClass('hide');
+            $('.dropdown li').eq(cur).css('margin-top', '5px').removeClass('hide');
+            $('.dropdown li').eq(cur).animate({marginTop: '0px'}, 'fast', function(){
+                $(this).removeClass('hide');
+            });
+      });
+    });
+  </script>
 </head>
   <body>
     <%= render 'layouts/header' %>    

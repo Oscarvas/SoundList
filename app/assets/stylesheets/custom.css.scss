@@ -7,6 +7,26 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+ul {
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    padding: 0;
+}
+.dropdown li a {
+    text-decoration: none;
+}
+
+.centrado-porcentual {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* arriba, mi codigo */
+
 body {
   padding-top: 60px;
 }
