@@ -12,29 +12,19 @@ class SessionsController < ApplicationController
   	if !user.email
   		redirect_to edit_user_path(user), :alert => 'Please enter your email address.'
     else
-      #spoty = RSpotify::User.new(auth)
-      user.songs.destroy #cambio para actualizacion bruta
-      #spoty.playlists.each do |play|
-
-      spotify_user = RSpotify::User.new(auth)
-      #Import playlists through RSpotify
-      spotify_playlists = spotify_user.playlists
-      spotify_playlists.each do |p|
+      spoty = RSpotify::User.new(auth)
+      #user.songs.destroy #cambio para actualizacion bruta
+      spoty.saved_tracks.each do |pista| #deberia ser spoty.playlists pero da error de recurso no encontrado
         #este codigo añade las nuevas canciones que incorpore el usuario
-        p.tracks.each do |pista|
-
-          if user.songs.where(name: pista.name).count != 1
-            user.songs << Song.new( name: pista.name, preview: pista.preview_url, artist: pista.artists.first.name)
-            
-            artistas = RSpotify::Artist.search(pista.artists.first.name)
-            musico = artistas.first
-            
-            musico.genres.each do |genero|
-              user.genres << Genre.new( name: genero)
-            end
-
+        if user.songs.where(name: pista.name).count != 1
+          user.songs << Song.new( name: pista.name, preview: pista.preview_url, artist: pista.artists.first.name)
+          
+          artistas = RSpotify::Artist.search(pista.artists.first.name)
+          musico = artistas.first
+          
+          musico.genres.each do |genero|
+            user.genres << Genre.new( name: genero)
           end
-
         end
         #user.songs << Song.new( name: prev.name, preview: prev.preview_url, artist: prev.artists.first.name)
       end
