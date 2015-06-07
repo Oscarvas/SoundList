@@ -1,7 +1,7 @@
 <script>
   var cur = 0;
   $(function() {
-    $('.left').click(function() {
+    /*$('.left').click(function() {
           if(cur <= 0) return;
           var last = cur;
           cur --;
@@ -11,9 +11,9 @@
               $(this).removeClass('hide');
           });
           
-    });
+    });*/
 
-    $('.right').click(function() {
+    $('.pager').click(function() {
           if(cur >= $('.dropdown li').length - 1) return;
           var last = cur;
           cur ++;
@@ -29,11 +29,14 @@
 
   <h3><%= @user.name %></h3>
 <div class="container">
+  <ul class="pager">
+    <li><a href="javascript:void(0)">Next</a></li>
+  </ul>
 
   <div class="dropdown-container" style="display:inline-block" >
     <ul class="dropdown">
     <li style="height:30%">
-      <h4>Lista de canciones</h4>
+      <h4>Click on "Next" button to start discovering music ! </h4>
     </li>
     <% @user.songs.each do |fav| %>
       <%if fav.preview %> <!-- Solo las canciones que tengan enlace de preview>-->
@@ -47,15 +50,18 @@
     </ul>
   </div>
 
-  <div class="right" style="display:inline-block" >
-    <a href="javascript:void(0)">
-      <i class="glyphicon glyphicon-chevron-right"></i>
-    </a>
-  </div>
 
 </div>
 
 <!--
+
+  <div class="right" style="display:inline-block" >
+    <a href="javascript:void(0)">
+      <i class="glyphicon glyphicon-forward"></i>
+    </a>
+  </div>
+
+
 <div class="btn-group btn-group-justified">                
                 
               <-%-= content_tag(:button, image_tag("Rounded buttons/png/listen-green.png", :size => "170x50"), :type => "button",:onclick => "aud_play_pause();") %>
