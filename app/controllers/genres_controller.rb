@@ -88,27 +88,27 @@ class GenresController < ApplicationController
       similar = Echonest::Genre.similar ('S6YKWF6QCDG012BBJ', gen, result: 5)
       g = similar.to_json
       json = JSON.parse (g)
-      json['genres'].each do |genress| {
+      json['genres'].each do |genress| 
         genr.push (genress['name'])
-      }
+      end
     end
     lista_artistas = []
     lista_generos.each do |genero|
       artist = Echonest::Genre.artist('S6YKWF6QCDG012BBJ', genero, result: 10)
       g = artist.to_json
       json = JSON.parse (g)
-      json['artists'].each do |a| {
+      json['artists'].each do |a| 
         lista_artistas << a['id']
-      }
+      end
     end
     lista_canciones = []
     lista_artistas.each do |artista|
       song = Echonest::Artist.songs('S6YKWF6QCDG012BBJ', artista, result: 3)
       g = artist.to_json
       json = JSON.parse (g)
-      json['songs'].each do |a| {
+      json['songs'].each do |a| 
       lista_canciones << a['id']
-      }
+      end
     end
 
   end
